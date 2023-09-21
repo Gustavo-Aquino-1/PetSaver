@@ -1,9 +1,10 @@
 import { Schema } from 'mongoose'
 import Abstract from './Abstract'
 
-interface IUser {
+export interface IUser {
   id?: string
   _id?: string
+  token?: string
   name: string
   email: string
   password: string

@@ -1,13 +1,13 @@
 import { Schema } from 'mongoose'
 import Abstract from './Abstract'
 
-interface IPet {
+export interface IPet {
   id?: string
   _id?: string
   ownerId: string
   name: string
   breed: string
-  lastLocaltion: {
+  lastLocation: {
     neighborhood: string
     city: string
     state: string
@@ -24,7 +24,7 @@ export default class Pet extends Abstract<IPet> {
         ownerId: { type: String, required: true },
         name: { type: String, required: true },
         breed: { type: String, required: true },
-        lastLocaltion: {
+        lastLocation: {
           type: {
             neighborhood: String,
             city: String,

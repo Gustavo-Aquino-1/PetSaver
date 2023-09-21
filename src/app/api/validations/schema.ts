@@ -14,4 +14,13 @@ const userSchema = joi.object({
   location: locationSchema.required(),
 })
 
-export { userSchema }
+const petSchema = joi.object({
+  ownerId: joi.string().required(),
+  name: joi.string().min(2).required(),
+  breed: joi.string().min(2).required(),
+  lastLocation: locationSchema.required(),
+  description: joi.string().min(1).required(),
+  image: joi.string().min(5).required(),
+})
+
+export { userSchema, petSchema }

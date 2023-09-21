@@ -1,7 +1,7 @@
 import { Schema } from 'mongoose'
 import Abstract from './Abstract'
 
-interface IComment {
+export interface IComment {
   id?: string
   _id?: string
   petId: string
